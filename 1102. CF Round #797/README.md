@@ -1,5 +1,4 @@
-# New Algorithm Project week 1
-## CF Round 797
+# CF Round 797
 
 ## Result
 ![Result](https://cdn.discordapp.com/attachments/1029313688634675231/1037565005316489266/image.png)
