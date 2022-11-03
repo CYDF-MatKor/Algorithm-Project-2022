@@ -19,7 +19,7 @@ int main() {
     init();
 
     int testCase, arrNum, i;
-    vector<int> arrA, arrB;
+    vector<int> arrA, arrB,arrC;
     bool isPossible;
 
     cin >> testCase;
@@ -29,13 +29,15 @@ int main() {
 
         arrA.resize(arrNum);
         arrB.resize(arrNum);
+        arrC.resize(arrNum);
 
         for(i = 0; i < arrNum; i++) cin >> arrA[i];
         for(i = 0; i < arrNum; i++) cin >> arrB[i];
-
+        for(i = 0; i < arrNum; i++) arrC[i]=arrA[i]-arrB[i];
+        ll m=*max_element(arrC.begin(),arrC.end());
         for(i = 0; i < arrNum; i++) {
             if(arrA[i]<arrB[i])isPossible=0;
-            if(arrA[i] - arrB[i]==arrA[0]-arrB[0] || arrB[i]==0) continue;
+            if(arrA[i] - arrB[i]==m || arrB[i]==0) continue;
 
             isPossible = false;
             break;
