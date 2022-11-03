@@ -245,7 +245,7 @@ The first line contains an integer $t$ ( $1 \le t \le 10^4$) — the number of t
 
 Next, descriptions of $t$ test cases follow.
 
-The first line of the input contains two integers $n$ and $k$ ( $1 \le k \le n \le 2\cdot10^5$). The second line consists of the letters '$\texttt{W}$' (white) and '$\texttt{B}$' (black). The line length is $n$.
+The first line of the input contains two integers $n$ and $k$ ( $1 \le k \le n \le 2\cdot10^5$). The second line consists of the letters ' $\texttt{W}$' (white) and ' $\texttt{B}$' (black). The line length is $n$.
 
 It is guaranteed that the sum of values $n$ does not exceed $2\cdot10^5$.
 
@@ -280,11 +280,11 @@ W
 
 ### Note
 
-In the first test case, $s$="$\texttt{BBWBW}$" and $k=3$. It is enough to recolor $s_3$ and get $s$="$\texttt{BBBBW}$". This string contains a segment of length $k=3$ consisting of the letters '$\texttt{B}$'.
+In the first test case, $s$=" $\texttt{BBWBW}$" and $k=3$. It is enough to recolor $s_3$ and get $s$=" $\texttt{BBBBW}$". This string contains a segment of length $k=3$ consisting of the letters ' $\texttt{B}$'.
 
-In the second test case of the example $s$="$\texttt{BBWBW}$" and $k=5$. It is enough to recolor $s_3$ and $s_5$ and get $s$="$\texttt{BBBBB}$". This string contains a segment of length $k=5$ consisting of the letters '$\texttt{B}$'.
+In the second test case of the example $s$=" $\texttt{BBWBW}$" and $k=5$. It is enough to recolor $s_3$ and $s_5$ and get $s$=" $\texttt{BBBBB}$". This string contains a segment of length $k=5$ consisting of the letters ' $\texttt{B}$'.
 
-In the third test case of the example $s$="$\texttt{BBWBW}$" and $k=1$. The string $s$ already contains a segment of length $k=1$ consisting of the letters '$\texttt{B}$'.
+In the third test case of the example $s$=" $\texttt{BBWBW}$" and $k=1$. The string $s$ already contains a segment of length $k=1$ consisting of the letters ' $\texttt{B}$'.
 
 ## E Description
 
@@ -445,7 +445,7 @@ For example, we have $n=5$ carriages and array $a = [10, 13, 5, 2, 6]$. Then the
 
 There are also messages saying that some engine has been corrupted:
 
-- message "$\texttt{k d}$" means that the speed of the $k$-th carriage has decreased by $d$ (that is, there has been a change in the maximum speed of the carriage $a_k = a_k - d$).
+- message " $\texttt{k d}$" means that the speed of the $k$-th carriage has decreased by $d$ (that is, there has been a change in the maximum speed of the carriage $a_k = a_k - d$).
 
 Messages arrive sequentially, the processing of the next message takes into account the changes from all previous messages.
 
