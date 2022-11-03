@@ -17,9 +17,9 @@ Among all possible pedestals of $n$ blocks, deduce one such that the platform he
 
 ### Input ###
 
-The first line of input data contains an integer $t$ ($1 \le t \le 10^4$) — the number of test cases.
+The first line of input data contains an integer $t$ ( $1 \le t \le 10^4$ ) — the number of test cases.
 
-Each test case contains a single integer $n$ ($6 \le n \le 10^5$) — the total number of blocks for the pedestal. All $n$ blocks must be used.
+Each test case contains a single integer $n$ ( $6 \le n \le 10^5$ ) — the total number of blocks for the pedestal. All $n$ blocks must be used.
 
 It is guaranteed that the sum of $n$ values over all test cases does not exceed $10^6$.
 
