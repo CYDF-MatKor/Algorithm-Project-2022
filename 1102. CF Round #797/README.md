@@ -25,7 +25,7 @@ It is guaranteed that the sum of $n$ values over all test cases does not exceed 
 
 ### Output ###
 
-For each test case, output $3$ numbers $h_2, h_1, h_3$ — the platform heights for $2$-nd, $1$-st and $3$-rd places on a pedestal consisting of $n$ blocks ($h_1+h_2+h_3=n$, $0 < h_3 < h_2 < h_1$).
+For each test case, output $3$ numbers $h_2, h_1, h_3$ — the platform heights for $2$-nd, $1$-st and $3$-rd places on a pedestal consisting of $n$ blocks ( $h_1+h_2+h_3=n $, $0 < h_3 < h_2 < h_1$).
 
 Among all possible pedestals, output the one for which the value of $h_1$ **minimal** . If there are several of them, output any of them.
 
