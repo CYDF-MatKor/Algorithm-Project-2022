@@ -35,18 +35,32 @@ int main(){
     cin>>t;
     while(t--) {
         cin>>n;
-        vector<ll> v(n),vc(n);
+        vector<ll> v(n),vc(n),ch(n);
         string s;
         cin>>s;
         for(auto &vv:v) cin >> vv,vv--;
-        for(i=0;i<n;i++){
-            ll y=v[i];
-            ll j=1;
-            while(s[i]!=s[y]){
-                y=v[y];
-                j++;
+        for(i=0;i<n;i++) {
+            if(ch[i]) continue;
+            set<ll> li;
+            for(j=i;j<n;j++) {
+                if(s[i]==s[j]) {
+                    li.insert(j);
+                    ch[j] = 1;
+                }
             }
-            vc[i]=j;
+            set<ll> ori = li;
+            int cnt=1;
+            while(true){
+                set<ll> tmp;
+                for(auto &ll:li) tmp.insert(find(all(v),ll)-v.begin());
+                li = tmp;
+                if(li==ori) break;
+                cnt++;
+            }
+            vc.push_back(cnt);
+
+
+
         }
         ll sum =0;
         for(auto &vv:vc) sum=lcm(sum,vv);
