@@ -18,8 +18,8 @@ void init();
 int main() {
     init();
 
-    int testCase, presentNum, i, k, left, right, result;
-    vector<int> presents;
+    ll testCase, presentNum, i, k, left, right, result;
+    vector<ll> presents;
 
     cin >> testCase;
     while(testCase--) {
@@ -50,7 +50,6 @@ int main() {
 
         cout << result << '\n';
     }
-
 
     return 0;
 }
