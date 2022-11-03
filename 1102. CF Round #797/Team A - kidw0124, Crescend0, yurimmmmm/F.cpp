@@ -35,35 +35,45 @@ int main(){
     cin>>t;
     while(t--) {
         cin>>n;
-        vector<ll> v(n),vc(n),ch(n);
+        vector<ll> v(n),vc(n+1);
+        vector<vector<ll>>vvv(n);
+        unordered_map<ll,unordered_set<ll>>vvc;
         string s;
         cin>>s;
         for(auto &vv:v) cin >> vv,vv--;
-        for(i=0;i<n;i++) {
-            if(ch[i]) continue;
-            set<ll> li;
-            for(j=i;j<n;j++) {
-                if(s[i]==s[j]) {
-                    li.insert(j);
-                    ch[j] = 1;
+        for(i=0;i<n;i++){
+            ll y=i;
+            ll j=0;
+            do{
+                y=v[y];
+                j++;
+                if(s[i]==s[y]){
+                    vvv[i].push_back(j);
+                }
+            }while(y!=i);
+            vc[i]=j;
+            if(vvc.find(vc[i])==vvc.end()){
+                for(auto k:vvv[i]){
+                    if(vc[i]%k==0)vvc[vc[i]].insert(k);
                 }
             }
-            set<ll> ori = li;
-            int cnt=1;
-            while(true){
-                set<ll> tmp;
-                for(auto &ll:li) tmp.insert(find(all(v),ll)-v.begin());
-                li = tmp;
-                if(li==ori) break;
-                cnt++;
+            else{
+                unordered_set<ll>st=vvc[vc[i]];
+                for(auto k:st){
+                    if(!binary_search(vvv[i].begin(),vvv[i].end(),k))vvc[vc[i]].erase(k);
+                }
             }
-            vc.push_back(cnt);
-
-
-
         }
         ll sum =0;
-        for(auto &vv:vc) sum=lcm(sum,vv);
+        for(auto p:vvc){
+            ll px=p.first;
+            ll mm=px;
+            for(auto pp:p.second){
+                if(pp<mm)mm=pp;
+            }
+            sum=lcm(sum,mm);
+        }
+
         cout << sum <<'\n';
     }
 
